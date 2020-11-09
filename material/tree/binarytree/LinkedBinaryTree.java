@@ -1,7 +1,7 @@
 package material.tree.binarytree;
 
 import material.Position;
-import material.tree.iterators.BFSIterator;
+import material.tree.iterators.InorderBinaryTreeIterator;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -224,7 +224,7 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 
     @Override
     public Iterator<Position<E>> iterator() {
-        return new BFSIterator<>(this);
+        return new InorderBinaryTreeIterator<>(this);
     }
 
 
@@ -441,6 +441,7 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 
     @Override
     public boolean isComplete() {
+        //TODO: Ejercicio Practica 3
         for (Position<E> next : this) {
             if (this.isInternal(next) && (!this.hasLeft(next) || !this.hasRight(next)))
                 return false;

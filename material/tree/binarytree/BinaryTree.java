@@ -1,7 +1,7 @@
 package material.tree.binarytree;
 
 import material.Position;
-import material.tree.Tree;
+import material.tree.*;
 
 /**
  * An interface for a binary tree, where each node can have zero, one, or two
