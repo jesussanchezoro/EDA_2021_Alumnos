@@ -440,8 +440,7 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
     }
 
     @Override
-    public boolean isComplete() {
-        //TODO: Ejercicio Practica 3
+    public boolean isComplete() 
         for (Position<E> next : this) {
             if (this.isInternal(next) && (!this.hasLeft(next) || !this.hasRight(next)))
                 return false;
